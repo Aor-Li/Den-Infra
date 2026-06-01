@@ -1,3 +1,12 @@
+{ den, ... }:
 {
-  den.aspects.Nurari = { };
+  den.aspects.Nurari = {
+    env = "wsl";
+    type = "desktop";
+    distro = "nixos";
+    
+    includes = [
+      den.aspects.system
+    ];
+  };
 }
