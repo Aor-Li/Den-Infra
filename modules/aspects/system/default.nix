@@ -1,8 +1,8 @@
 { den, ... }:
 {
-  den.aspect.system = {
+  den.aspects.system = {
     includes = [
-      den.aspect.system.core
+      den.aspects.system.core
     ];
   };
 }
