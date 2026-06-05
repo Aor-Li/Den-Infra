@@ -5,7 +5,7 @@
     nixos-wsl.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  den.aspects.system.core = 
+  den.aspects.system.core =
     { host, user }:
     {
       nixos = lib.mkIf (host.env == "wsl" && host.distro == "nixos") {
@@ -25,3 +25,4 @@
       };
     };
 }
+
