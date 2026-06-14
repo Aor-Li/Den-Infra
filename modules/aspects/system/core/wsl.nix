@@ -5,22 +5,29 @@
     nixos-wsl.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  den.aspects.system.core =
-    { host, user }:
-    {
-      nixos = lib.mkIf (host.env == "wsl" && host.distro == "nixos") {
-        imports = [ inputs.nixos-wsl.nixosModules.wsl ];
+  den.aspects.system.includes = [
+    (
+      { host, ... }:
+      let
+        isWsl = host.env == "wsl" && host.distro == "nixos";
+      in
+      {
+        nixos = {
+          imports = lib.optionals isWsl [ inputs.nixos-wsl.nixosModules.wsl ];
+        }
+        // lib.optionalAttrs isWsl {
+          wsl = {
+            enable = true;
+            useWindowsDriver = true;
+            startMenuLaunchers = true;
 
-        wsl = {
-          enable = true;
-          useWindowsDriver = true;
-          startMenuLaunchers = true;
+            wslConf.automount.root = "/mnt";
+            wslConf.network.hostname = host.hostName;
 
-          wslConf.automount.root = "/mnt";
-          wslConf.network.hostname = host.hostName;
-
-          defaultUser = user.userName;
+            defaultUser = lib.head (lib.attrNames host.users);
+          };
         };
-      };
-    };
+      }
+    )
+  ];
 }
