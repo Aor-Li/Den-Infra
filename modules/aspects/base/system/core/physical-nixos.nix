@@ -1,6 +1,6 @@
 { lib, ... }:
 {
-  den.aspects.system.physical-nixos =
+  den.aspects.system.core.physical-nixos =
     { host, ... }:
     {
       nixos = lib.mkIf (host.env == "physical" && host.distro == "nixos") {

@@ -5,7 +5,7 @@
     nixos-wsl.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  den.aspects.system.wsl-nixos =
+  den.aspects.system.core.wsl-nixos =
     { host, ... }:
     {
       nixos = {
@@ -17,7 +17,7 @@
           startMenuLaunchers = true;
 
           wslConf.automount.root = "/mnt";
-          wslConf.network.hostname = host.hostName;
+          # wslConf.network.hostname = host.hostName;
 
           defaultUser = lib.head (lib.attrNames host.users);
         };
