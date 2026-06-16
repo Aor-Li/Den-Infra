@@ -1,7 +1,7 @@
-{ lib, den, ... }:
+{ lib, ... }:
 {
   den.schema.host = {
-    options = { 
+    options = {
       env = lib.mkOption {
         type = lib.types.enum [
           "physical"
@@ -26,13 +26,10 @@
         type = lib.types.enum [
           "nixos"
           "darwin"
-          "other"
         ];
         default = "nixos";
         description = "The Linux distribution running on the host device.";
       };
     };
-
-    includes = [ den.aspects.system ];
   };
 }

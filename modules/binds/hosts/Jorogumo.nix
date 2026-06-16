@@ -1,6 +1,6 @@
 { den, ... }:
 {
-  den.aspects.Jorogumo = {
+  den.aspects.Tobimune = {
     nixos = {
       # FIXME: 临时使用的占位配置，在aoostar机器上生成后重写
       fileSystems."/" = {
