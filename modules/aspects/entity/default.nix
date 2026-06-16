@@ -7,7 +7,8 @@
 
     includes = [
       den.aspects.nix
-      den.batteries.define-user
+      den.provides.define-user
+      den.provides.hostname
     ];
   };
 }

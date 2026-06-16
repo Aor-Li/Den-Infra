@@ -1,6 +1,6 @@
 { den, ... }:
 {
   den.aspects.aor.includes = [
-    den.batteries.primary-user
+    den.provides.primary-user
   ];
 }
