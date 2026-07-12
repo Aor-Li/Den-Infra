@@ -1,5 +1,9 @@
 # define al hosts + users + homes
 {
+  #####################
+  ### System + Home ###
+  #####################
+
   # main nixos pc
   den.hosts.x86_64-linux.Enten = {
     env = "physical";
@@ -44,4 +48,9 @@
     users.aor = { };
   };
   den.homes.x86_64-linux."aor@Tobimune" = { };
+
+  ############################################
+  ### Standard Alone Home-Manager Profiles ###
+  ############################################
+  den.homes.x86_64-linux."aor@philo" = { };
 }
