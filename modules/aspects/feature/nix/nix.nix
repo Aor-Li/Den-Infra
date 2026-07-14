@@ -3,5 +3,8 @@
   den.aspects.nix.includes = with den.aspects.nix; [
     settings
     home-manager
+    nix-index
+    nh
+    nix-ld
   ];
 }
