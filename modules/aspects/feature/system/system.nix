@@ -11,7 +11,6 @@
         den.aspects.system.sleep
         den.aspects.system.fonts
         den.aspects.system.xdg
-        den.aspects.system.shell
       ];
     };
 }

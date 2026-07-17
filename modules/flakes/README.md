@@ -20,6 +20,7 @@
 | [`dendritic.nix`](dendritic.nix) | `den` / `import-tree` / `flake-file` / `flake-parts` | 整套框架的地基：flake-parts、自动导入、flake.nix 生成器，以及 `den` 提供的 dendritic 模块 |
 | [`nixpkgs.nix`](nixpkgs.nix) | `nixpkgs` | 固定 nixpkgs 到 `nixpkgs-unstable` 频道 |
 | [`home-manager.nix`](home-manager.nix) | `home-manager` | 引入 home-manager 的 flakeModule，其 `nixpkgs` 跟随本仓库的 `nixpkgs` |
+| [`darwin.nix`](darwin.nix) | `darwin`（nix-darwin） | darwin 主机的系统构建器：den 默认取 `inputs.darwin.lib.darwinSystem`，故 input **必须名为 `darwin`**。无 flakeModule 可引，只需声明 input |
 | [`devshell.nix`](devshell.nix) | `devshell` | 引入 numtide/devshell 的 flakeModule，用于开发环境 |
 
 ## 边界：什么该放这里，什么不该
