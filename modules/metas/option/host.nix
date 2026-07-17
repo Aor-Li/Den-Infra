@@ -4,9 +4,6 @@
     { config, ... }:
     {
       options = {
-        #############################
-        ### Major Manual Triggers ###
-        #############################
         env = lib.mkOption {
           type = lib.types.enum [
             "physical"
@@ -36,9 +33,6 @@
           description = "The Linux distribution running on the host device.";
         };
 
-        ##########################
-        ### Auxiliary Funtions ###
-        ########################## 
         graphical = lib.mkOption {
           type = lib.types.bool;
           default = false;

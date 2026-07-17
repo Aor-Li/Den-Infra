@@ -1,6 +1,6 @@
 { ... }:
 {
-  den.aspects.desktop.apps.obsidian =
+  den.aspects.desktop.applications.obsidian =
     { host, ... }:
     {
       homeManager =

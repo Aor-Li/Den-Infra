@@ -9,6 +9,7 @@
     env = "physical";
     role = "desktop";
     distro = "nixos";
+    graphical = true;
     users.aor = { };
   };
   den.homes.x86_64-linux."aor@Enten" = {
@@ -35,6 +36,7 @@
     env = "virtual";
     role = "laptop";
     distro = "nixos";
+    graphical = true;
     users.aor = { };
   };
   den.homes.aarch64-linux."aor@Kuregumo" = {
@@ -48,6 +50,7 @@
     env = "wsl";
     role = "desktop";
     distro = "nixos";
+    graphical = true;
     users.aor = { };
   };
   den.homes.x86_64-linux."aor@Kumeyuri" = {
@@ -61,6 +64,7 @@
     env = "physical";
     role = "server";
     distro = "nixos";
+    graphical = true;
     users.aor = { };
   };
   den.homes.x86_64-linux."aor@Tobimune" = {

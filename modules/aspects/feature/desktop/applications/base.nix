@@ -1,6 +1,6 @@
 { ... }:
 {
-  den.aspects.desktop.apps.base =
+  den.aspects.desktop.applications.base =
     { host, ... }:
     {
       homeManager =

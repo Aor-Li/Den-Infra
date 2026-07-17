@@ -8,10 +8,10 @@
 
     includes = [
       den.aspects.nix
-      den.aspects.system 
+      den.aspects.system
       den.aspects.security
       den.aspects.network
-      
+
       den.provides.define-user
       den.provides.hostname
     ];

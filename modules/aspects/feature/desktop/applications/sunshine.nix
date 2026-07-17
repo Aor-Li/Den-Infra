@@ -1,6 +1,6 @@
 { ... }:
 {
-  den.aspects.desktop.apps.sunshine =
+  den.aspects.desktop.applications.sunshine =
     { host, ... }:
     {
       nixos =

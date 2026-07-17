@@ -22,6 +22,11 @@ let
   systemKeyFile = "/var/lib/sops-nix/key.txt";
 in
 {
+  flake-file.inputs = {
+    sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix.inputs.nixpkgs.follows = "nixpkgs";
+  };
+
   den.aspects.security.secrets = {
     nixos =
       {
