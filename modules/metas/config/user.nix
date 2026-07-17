@@ -1,9 +1,8 @@
 { den, ... }:
 {
-  den.schema.home.includes = [
-    den.aspects.system
-    den.aspects.ai
-    den.aspects.dev
-    den.aspects.desktop
+  den.schema.home.includes = with den.aspects; [
+    ai
+    dev
+    desktop
   ];
 }
