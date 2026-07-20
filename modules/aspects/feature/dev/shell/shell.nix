@@ -15,6 +15,14 @@
         ];
       };
 
+    # nix-darwin 不会像 NixOS 那样自动把 programs.fish.enable 注册进 /etc/shells，
+    # 手动加进 environment.shells 让 fish 成为合法的登录 shell（chsh 才认）。
+    darwin =
+      { pkgs, ... }:
+      {
+        environment.shells = [ pkgs.fish ];
+      };
+
     homeManager = {
       programs.bash.enable = true;
       programs.fish.enable = true;
