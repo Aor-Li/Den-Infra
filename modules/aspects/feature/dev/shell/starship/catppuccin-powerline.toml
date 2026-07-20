@@ -37,6 +37,7 @@ palette = 'catppuccin_mocha'
 disabled = false
 bash_indicator = ""
 fish_indicator = "󱙴"
+zsh_indicator = "󰰶"
 unknown_indicator = "󱧤"
 style = "bg:red fg:crust"
 format = '[$indicator ]($style)'

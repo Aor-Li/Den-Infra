@@ -18,6 +18,7 @@
     homeManager = {
       programs.bash.enable = true;
       programs.fish.enable = true;
+      programs.zsh.enable = true;
 
       # 确保一些 TUI 程序色彩显示正常（原 feature/system/shell.nix，迁 dev 时并入此处）
       home.sessionVariables.COLORTERM = "truecolor";
