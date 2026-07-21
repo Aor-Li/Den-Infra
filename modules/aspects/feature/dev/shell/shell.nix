@@ -20,6 +20,7 @@
     darwin =
       { pkgs, ... }:
       {
+        environment.systemPackages = [ pkgs.fish ];
         environment.shells = [ pkgs.fish ];
       };
 
