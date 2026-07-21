@@ -15,5 +15,5 @@
       };
     };
 
-  den.aspects.system.core.includes = [ den.aspects.system.core.darwin ];
+  den.aspects.system.core.includes = [ den.aspects.system.core.mac ];
 }
