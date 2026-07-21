@@ -1,0 +1,19 @@
+{ den, lib, ... }:
+{
+  den.aspects.system.core.mac =
+    { host, ... }:
+    {
+      darwin = {
+        homebrew = {
+          enable = true;
+          onActivation = {
+            autoUpdate = true;
+            upgrade = true;
+            cleanup = "zap";
+          };
+        };
+      };
+    };
+
+  den.aspects.system.core.includes = [ den.aspects.system.core.darwin ];
+}
