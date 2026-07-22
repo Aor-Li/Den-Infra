@@ -24,14 +24,19 @@
         environment.shells = [ pkgs.fish ];
       };
 
-    homeManager = {
-      programs.bash.enable = true;
-      programs.fish.enable = true;
-      programs.zsh.enable = true;
+    homeManager =
+      { config, ... }:
+      {
+        programs.bash.enable = true;
+        programs.fish.enable = true;
+        programs.zsh.enable = true;
 
-      # 确保一些 TUI 程序色彩显示正常（原 feature/system/shell.nix，迁 dev 时并入此处）
-      home.sessionVariables.COLORTERM = "truecolor";
-      systemd.user.sessionVariables.COLORTERM = "truecolor";
-    };
+        # 确保一些 TUI 程序色彩显示正常（原 feature/system/shell.nix，迁 dev 时并入此处）
+        home.sessionVariables.COLORTERM = "truecolor";
+        systemd.user.sessionVariables.COLORTERM = "truecolor";
+        
+        # hack: zsh warning work around
+        programs.zsh.dotDir = "${config.xdg.configHome}/zsh";
+      };
   };
 }
